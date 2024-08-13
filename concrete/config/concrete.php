@@ -6,9 +6,9 @@ return [
      *
      * @var string
      */
-    'version' => '9.3.2',
-    'version_installed' => '9.3.2',
-    'version_db' => '20240515173142', // the key of the latest database migration
+    'version' => '9.3.3',
+    'version_installed' => '9.3.3',
+    'version_db' => '20240711000000', // the key of the latest database migration
 
     /*
      * Installation status
@@ -1043,7 +1043,8 @@ return [
             'cookie_path' => false, // set a specific path here if you know it, otherwise it'll default to relative
             'cookie_lifetime' => 0,
             'cookie_domain' => false,
-            'cookie_secure' => false,
+            // true: enable the 'secure' flag; false: disable the secure flag; null: enable the 'secure' flag for https requests only
+            'cookie_secure' => null,
             'cookie_httponly' => true,
             'cookie_raw' => false,
             'cookie_samesite' => null,
@@ -1483,4 +1484,8 @@ return [
             // Where 'icon' is the handle of a FontAwesome 4 icon (see https://fontawesome.com/v4.7.0/icons/ )
         ],
     ],
+
+    'file_chooser' => [
+        'results' => 20,
+    ]
 ];
